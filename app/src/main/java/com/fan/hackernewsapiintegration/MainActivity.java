@@ -73,6 +73,9 @@ MainOp.OnMainOpDone{
         populateList(storiesDataList);
         showDismissSwipeRefresh(false);
         showToast("Online Data");
+        if(storiesDataList.isEmpty()){
+            showToast("No data");
+        }
 
     }
     public void showToast(String message){
@@ -85,11 +88,15 @@ MainOp.OnMainOpDone{
         populateList(storiesDataList);
         showDismissSwipeRefresh(false);
         showToast("Local Data");
+        if(storiesDataList.isEmpty()){
+            showToast("No data");
+        }
     }
 
     @Override
     public void onDataGetError(String error) {
         Log.v(TAG,"Error: "+error);
         showDismissSwipeRefresh(false);
+        showToast(error);
     }
 }

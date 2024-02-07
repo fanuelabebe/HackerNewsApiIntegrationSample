@@ -30,9 +30,9 @@ public class GsonParser {
         storiesData.setCode(storyData.getId());
         storiesData.setStory(storyData.getTitle());
         storiesData.setCommentCount(storyData.getKids() != null? String.valueOf(storyData.getKids().length):"");
-        storiesData.setUpVoteLastUpdated("");
+        storiesData.setUpVoteLastUpdated(storyData.getBy());
         storiesData.setLink(storyData.getUrl());
-        storiesData.setUpVoteCount(storyData.getPoll());
+        storiesData.setUpVoteCount("+"+storyData.getScore());
 
         return storiesData;
     }

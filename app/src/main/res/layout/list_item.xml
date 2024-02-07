@@ -30,7 +30,6 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:fontFamily="sans-serif-medium"
-            android:padding="4dp"
             android:text="+59"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/sn_tv"
@@ -40,7 +39,7 @@
             android:id="@+id/points_user_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="4dp"
+            android:paddingStart="4dp"
             android:text="1 hour ago by someone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/points_tv"
@@ -89,6 +88,14 @@
             app:layout_constraintEnd_toStartOf="@+id/comments_iv"
             app:layout_constraintStart_toEndOf="@+id/sn_tv"
             app:layout_constraintTop_toBottomOf="@id/content_tv" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/link_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
