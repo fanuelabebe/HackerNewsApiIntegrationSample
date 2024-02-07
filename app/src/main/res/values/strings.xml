@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HackerNewsApiIntegration</string>
+    <string name="title">Hacker News</string>
+    <string name="sub_title">news.ycombinator.com</string>
+    <string name="story_base_url">https://hacker-news.firebaseio.com/v0/item/%1$i.json?print=pretty</string>
+<!--    <string name="story_base_url">Hello, %1$s! You have %2$d new messages.</string>-->
+</resources>
