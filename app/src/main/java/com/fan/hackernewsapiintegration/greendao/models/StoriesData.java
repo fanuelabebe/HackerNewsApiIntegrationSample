@@ -1,4 +1,6 @@
 package com.fan.hackernewsapiintegration.greendao.models;
+import com.google.gson.annotations.SerializedName;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
@@ -6,17 +8,18 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity
 public class StoriesData {
     @Id(autoincrement = true)
-    private long id;
+    private long Id;
+    @SerializedName("id")
+    private long code;
     private String upVoteCount;
     private String upVoteLastUpdated;
     private String story;
     private String link;
     private String commentCount;
 
-    @Generated(hash = 1574568161)
-    public StoriesData(long id, String upVoteCount, String upVoteLastUpdated,
+    public StoriesData(long code, String upVoteCount, String upVoteLastUpdated,
             String story, String link, String commentCount) {
-        this.id = id;
+        this.code = code;
         this.upVoteCount = upVoteCount;
         this.upVoteLastUpdated = upVoteLastUpdated;
         this.story = story;
@@ -28,12 +31,25 @@ public class StoriesData {
     public StoriesData() {
     }
 
-    public long getId() {
-        return id;
+    @Generated(hash = 1564190235)
+    public StoriesData(long Id, long code, String upVoteCount,
+            String upVoteLastUpdated, String story, String link,
+            String commentCount) {
+        this.Id = Id;
+        this.code = code;
+        this.upVoteCount = upVoteCount;
+        this.upVoteLastUpdated = upVoteLastUpdated;
+        this.story = story;
+        this.link = link;
+        this.commentCount = commentCount;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public long getCode() {
+        return code;
+    }
+
+    public void setCode(long code) {
+        this.code = code;
     }
 
     public String getUpVoteCount() {
@@ -74,5 +90,13 @@ public class StoriesData {
 
     public void setCommentCount(String commentCount) {
         this.commentCount = commentCount;
+    }
+
+    public long getId() {
+        return this.Id;
+    }
+
+    public void setId(long Id) {
+        this.Id = Id;
     }
 }

@@ -37,11 +37,12 @@ public class StoriesRecyclerAdapter extends RecyclerView.Adapter<StoriesViewHold
     @Override
     public void onBindViewHolder(@NonNull StoriesViewHolder holder, int position) {
         StoriesData storiesData = mStoriesDataList.get(position);
+        holder.rawNumberText.setText(""+(position + 1));
         holder.upVoteCountText.setText(storiesData.getUpVoteCount());
         holder.lastUpdatedText.setText(storiesData.getUpVoteLastUpdated());
-        holder.storyText.setText(storiesData.getUpVoteLastUpdated());
-        holder.commentCountText.setText(storiesData.getUpVoteLastUpdated());
-        holder.linkText.setText(storiesData.getUpVoteLastUpdated());
+        holder.storyText.setText(storiesData.getStory());
+        holder.commentCountText.setText(storiesData.getCommentCount());
+        holder.linkText.setText(storiesData.getLink());
         holder.itemView.setOnClickListener(view ->{
             onItemClick.onItemClick(storiesData);
         });
@@ -49,6 +50,6 @@ public class StoriesRecyclerAdapter extends RecyclerView.Adapter<StoriesViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mStoriesDataList.size();
     }
 }

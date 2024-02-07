@@ -30,6 +30,7 @@ public class Singleton {
         SQLiteDatabase db = helper.getWritableDatabase();
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
+//        daoSession.getStoriesDataDao().dropTable(helper.getWritableDb(), true);
     }
 
     public DaoSession getDaoSession(){

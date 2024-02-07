@@ -12,7 +12,7 @@ public class Insert {
         StoriesDataDao storiesDataDao = Common.getStoriesDao(context);
         if(storiesDataDao != null){
             try {
-                storiesDataDao.insert(storiesData);
+                storiesDataDao.insertOrReplace(storiesData);
                 return true;
             }catch (Exception e){
                 e.printStackTrace();
